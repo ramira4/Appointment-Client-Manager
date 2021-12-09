@@ -1,0 +1,3 @@
+ || There exists 2 appointment/s of the type 'type1' ||
+ || There exists 3 appointment/s of the type 'type2' ||
+ || There exists 2 appointment/s of the type 'type' ||
