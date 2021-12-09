@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentController">
+   <children>
+      <Label layoutX="22.0" layoutY="20.0" text="New Appointment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="29.0" layoutY="72.0" prefHeight="367.0" prefWidth="666.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="0.0" prefWidth="108.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="0.0" prefWidth="525.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Appointment ID " />
+            <Label text="Title" GridPane.rowIndex="2" />
+            <Label text="Description" GridPane.rowIndex="3" />
+            <Label text="Location" GridPane.rowIndex="4" />
+            <Label text="Contact" GridPane.rowIndex="5" />
+            <Label text="Type" GridPane.rowIndex="6" />
+            <Label text="Start" GridPane.rowIndex="7" />
+            <Label text="End" GridPane.rowIndex="8" />
+            <TextField editable="false" prefHeight="25.0" prefWidth="221.0" text="Auto-Generated" GridPane.columnIndex="1" />
+            <ComboBox fx:id="contacts" prefWidth="150.0" promptText="Select Contact" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="title" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="location" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="type" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Label text="    Date:    " />
+                  <DatePicker fx:id="startDate" />
+                  <Label text="    Time:   " />
+                  <TextField fx:id="startTime" promptText="hh:mm" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Label text="    Time:   " />
+                  <TextField fx:id="endTime" promptText="hh:mm" />
+               </children>
+            </HBox>
+            <Label text="Customer" GridPane.rowIndex="1" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="  Customer ID:    " />
+                  <TextField fx:id="customerID" editable="false" prefHeight="25.0" prefWidth="59.0" />
+                  <Label text="   Customer Name :     " />
+                  <TextField fx:id="customerName" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="495.0" layoutY="456.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="save" mnemonicParsing="false" onAction="#saveClick" text="Save " />
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancelClick" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+      <Label layoutX="404.0" layoutY="439.0" text="Please enter time in military format. E.g. 09:02 or 16:00. " />
+      <Label fx:id="errorLabel" layoutX="348.0" layoutY="25.0" prefHeight="50.0" prefWidth="305.0" text="Error Label" textFill="#fc0808" />
+      <CheckBox fx:id="testingPurposes" layoutX="29.0" layoutY="426.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="20.0" />
+      <TextArea layoutX="46.0" layoutY="450.0" prefHeight="79.0" prefWidth="294.0" text="&lt;- TESTER: PLEASE  CHECK BOX TO CREATE &#10;APPOINTMENT OUTSIDE OF BUSSINESS &#10;HOURS FOR '15 MINUTE REMINDER'&#10; TESTING PURPOSES FOUND ON THE MAIN SCREEN" />
+   </children>
+</AnchorPane>
