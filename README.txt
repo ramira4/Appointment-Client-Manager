@@ -1,4 +1,4 @@
-# Appointment & Client Manager
+Appointment & Client Manager
 
 Application Purpose:
 
