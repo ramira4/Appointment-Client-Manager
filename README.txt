@@ -1,5 +1,7 @@
 Appointment & Client Manager
 
+[View Video Demo](https://www.youtube.com/watch?v=1eCCXnz30jg&t=61s)
+
 Application Purpose:
 
 Application allows user to interact with customer and appointment data in MySQL database. Tableviews 
