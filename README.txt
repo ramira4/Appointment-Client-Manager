@@ -1,7 +1,7 @@
 Appointment & Client Manager
 
 
-[View Video Demo](https://www.youtube.com/watch?v=1eCCXnz30jg&t=61s)
+View Video [Demo](https://youtu.be/1eCCXnz30jg)
 
 
 Application Purpose:
